@@ -54,12 +54,12 @@ class Program
 
     static void DisplayWelcome()
 {
-    Console.WriteLine($"\nWelcome to the program!"); 
+    Console.WriteLine($"Welcome to the program!"); 
 }
 
     static string DisplayName()
     {
-        Console.WriteLine($"\nWhat is your name? "); 
+        Console.WriteLine($"What is your name? "); 
         string name = Console.ReadLine();
         return name;
     }
