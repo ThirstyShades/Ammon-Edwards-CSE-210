@@ -16,7 +16,7 @@ string userChoice = ""; // while loop that ends when the user enters quit or the
 while(userChoice != "quit"){
 
 // Menue display
-Console.WriteLine($"\n---------------------------------------------------------------------------\nPress enter to hide a word, type quit to exit the program"); 
+Console.WriteLine($"\n---------------------------------------------------------------------------\nPress enter to hide a word, type show to reveal a word, type quit to exit the program"); 
 userChoice = Console.ReadLine();
 
 switch(userChoice)
