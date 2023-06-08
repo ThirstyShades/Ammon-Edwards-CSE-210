@@ -67,6 +67,7 @@ public class Activity
             {
                 Console.Write("\b\b");
                 value -= 1;
+
             }else
             {
                 Console.WriteLine("\nError please try again; your out of the safe constraint [0s-10sec]\n*Becease I said so (OuO)");
@@ -77,6 +78,7 @@ public class Activity
             
             
         }
+        
         
     }
 

@@ -27,10 +27,34 @@ switch(userChoice)
     case 1: // Breathing
     // Activity test = new Activity();
     BreathingActivity breathing = new BreathingActivity(BreathingTime());
+    Console.Clear();
+    breathing.WellcomeMessage();
+    Thread.Sleep(5000);
     breathing.Spinner();
-    breathing.BreathIn();
-    breathing.CountDown();
-    
+    for(int i =0;i<3;i+=1)//i++
+    {
+        Thread.Sleep(450);
+        breathing.BreathIn();
+        breathing.CountDown();
+        Thread.Sleep(450);
+        breathing.BreathOut();
+        breathing.CountDown();
+    }
+    // Thread.Sleep(450);
+    // breathing.BreathIn();
+    // breathing.CountDown();
+    // Thread.Sleep(450);
+    // breathing.BreathOut();
+    // breathing.CountDown();
+    // Thread.Sleep(450);
+    // breathing.BreathIn();
+    // breathing.CountDown();
+    // Thread.Sleep(450);
+    // breathing.BreathOut();
+    // breathing.CountDown();
+    // Thread.Sleep(450);
+    breathing.EndMessage();
+    Thread.Sleep(5000);
 
 
     break;
