@@ -10,30 +10,13 @@ public class BreathingActivity : Activity
 
     public void BreathIn()
     {
-        Console.WriteLine($"Breath in..."); // fuction to display time Console.WriteLine($"Breath in...{animation}");
-        Console.Write(5);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(4);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(3);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(2);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(1);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(1);
-        Thread.Sleep(1000);
-        Console.Write("\b");
-        Console.Write(0);
-        Thread.Sleep(1000);
-        Console.Write("\b");
- 
-        
+        Console.Write($"Breath in..."); // fuction to display time Console.WriteLine($"Breath in...{animation}");
+
+    }
+
+    public void BreathOut()
+    {
+        Console.Write($"Breath in..."); // fuction to display time Console.WriteLine($"Breath in...{animation}");
 
     }
 
