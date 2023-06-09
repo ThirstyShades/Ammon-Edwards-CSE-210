@@ -36,9 +36,10 @@ public class ReflectingActivity : Activity
         {
             
             Console.WriteLine("Reflection Prompt Placeholder");//Display Refelct prompt
-            Thread.Sleep(5000); //display spinner for 5s
+            SpinnerTime5s(); //display spinner for 5s loop for deration
             reflectingTime = reflectingTime - 5;
             
+
         }
        
     }

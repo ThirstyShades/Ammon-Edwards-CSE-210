@@ -1,7 +1,7 @@
 public class Activity
 {
     protected int _activityTime;
-    private int _spinnerSpeed = 450;
+    private int _spinnerSpeed = 625;
 
     private int _timerTime = 5;
 
@@ -52,51 +52,42 @@ public class Activity
         // Console.Write("\b");
     }
 
-    // public void SpinnerTime()
-    // {
-    // int deration = _activityTime;
-    // while(deration >0)//i++
-    // {
-    //     Console.Write("|");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("/");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("-");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("\\");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("|");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("/");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("-");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
-    //     Console.Write("\\");
-    //     Thread.Sleep(_spinnerSpeed);// pass in ms
-    //     Console.Write("\b");
+    public void SpinnerTime5s()
+    {
+    
+        Console.Write("|");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("/");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("-");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("\\");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("|");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("/");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("-");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
+        Console.Write("\\");
+        Thread.Sleep(_spinnerSpeed);// pass in ms
+        Console.Write("\b");
         
-
-    //     deration -= (_spinnerSpeed/1000)*8;
 
        
-    // }
-
     
-
-        
-
     //     // Console.Write("|");
     //     // Thread.Sleep(_spinnerSpeed);// pass in ms
     //     // Console.Write("\b");
 
-    // }
+    }
 
     public void Timer()
     {
