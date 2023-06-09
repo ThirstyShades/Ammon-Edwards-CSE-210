@@ -8,7 +8,7 @@
 
 
 
-int userChoice = 0; // while loop that ends when the user enters 6 to quit
+int userChoice = 0; // while loop that ends when the user enters 4 to quit
 while(userChoice != 4){
 
 // Menue display
@@ -30,6 +30,7 @@ switch(userChoice)
     Console.Clear();
     breathing.WellcomeMessage();
     Thread.Sleep(5000);
+    Console.Write("Get ready...");
     breathing.Spinner();
     for(int i =0;i<3;i+=1)//i++
     {
@@ -40,26 +41,21 @@ switch(userChoice)
         breathing.BreathOut();
         breathing.CountDown();
     }
-    // Thread.Sleep(450);
-    // breathing.BreathIn();
-    // breathing.CountDown();
-    // Thread.Sleep(450);
-    // breathing.BreathOut();
-    // breathing.CountDown();
-    // Thread.Sleep(450);
-    // breathing.BreathIn();
-    // breathing.CountDown();
-    // Thread.Sleep(450);
-    // breathing.BreathOut();
-    // breathing.CountDown();
-    // Thread.Sleep(450);
     breathing.EndMessage();
     Thread.Sleep(5000);
-
-
+    
     break;
 
     case 2: 
+    ReflectingActivity reflecting = new ReflectingActivity(ActivityTime());
+    Console.Clear();
+    reflecting.WellcomeMessage();
+    reflecting.Instructions();
+    reflecting.EndMessage();
+    
+
+
+
     
     
     break;
@@ -77,7 +73,7 @@ switch(userChoice)
     // I would have done this different now that I see more and know more however there is no time. 
     static int ActivityTime()
     {
-        Console.WriteLine("How long, in second, would you like for your session?");
+        Console.WriteLine("How long, in seconds, would you like for your session?");
         int activityTime = int.Parse(Console.ReadLine());
         return activityTime;
     }

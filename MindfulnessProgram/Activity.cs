@@ -3,6 +3,8 @@ public class Activity
     protected int _activityTime;
     private int _spinnerSpeed = 450;
 
+    private int _timerTime = 5;
+
 
 
     public Activity(int activityTime)
@@ -19,7 +21,7 @@ public class Activity
 
     public void Spinner()
     {
-        Console.WriteLine("Get ready...");
+        
         Console.Write("|");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
@@ -44,10 +46,38 @@ public class Activity
         Console.Write("\\");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
+        
         Console.Write("|");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
 
+    }
+
+    public void Timer()
+    {
+        Console.Write("\nYou may begine in: ");
+        int value = _timerTime;
+        while(value !=0)
+        {
+            Console.Write(value);
+            Thread.Sleep(1000);
+            if(value < 10)
+            {
+                Console.Write("\b");
+                value -= 1;
+            }
+            else if(value >= 10 && value <100)
+            {
+                Console.Write("\b\b");
+                value -= 1;
+
+            }
+            else
+            {
+                Console.WriteLine("Error int out of range");
+                break;
+            }
+        }
     }
 
 
