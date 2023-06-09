@@ -93,7 +93,7 @@ public class Activity
     {
         Console.Write("\nYou may begine in: ");
         int value = _timerTime;
-        while(value !=0)
+        while(value !=-1)
         {
             Console.Write(value);
             Thread.Sleep(1000);

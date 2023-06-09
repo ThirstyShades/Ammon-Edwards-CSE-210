@@ -48,6 +48,6 @@ public class ReflectingActivity : Activity
     {
         Console.Clear();
         Console.WriteLine($"Well done!\nYou have sucesfully compleated another {_activityTime}s reflecting citivty!");
-        Thread.Sleep(5000);
+        Spinner();
     }
 }

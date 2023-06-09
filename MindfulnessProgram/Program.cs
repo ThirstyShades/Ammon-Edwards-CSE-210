@@ -54,15 +54,18 @@ switch(userChoice)
     reflecting.ReflectPrompts();
     reflecting.EndMessage();
 
-    
-
-
-
-    
-    
     break;
 
     case 3:
+
+    ListingActivity listing = new ListingActivity(ActivityTime());
+    Console.Clear();
+    listing.WellcomeMessage();
+    Console.Write("Get ready...");
+    listing.Spinner();
+    listing.Instructions();
+    listing.UserInput();
+    listing.EndMessage();
 
     break;
 
