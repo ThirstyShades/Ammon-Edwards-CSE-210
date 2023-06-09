@@ -16,7 +16,7 @@ public class ReflectingActivity : Activity
     {
         Console.WriteLine("Consider the fallowing prompt\n");
 
-        Console.WriteLine("prompt");//prompt fuction from list
+        Console.WriteLine("prompt placeholder");//prompt fuction from list
 
         Console.WriteLine("\nWhen you have somthing in mind, press enter to continue.");
         Console.ReadLine();
@@ -25,15 +25,22 @@ public class ReflectingActivity : Activity
 
         Timer();// generic timer in activity class. its countdown value can be changed it attributes.
         // Not sure if these need to be in a list and pulled
+
+    }
+
+    public void ReflectPrompts()
+    {
         Console.Clear();
-        Console.Write("How did you fell when it was complete? ");
-        Spinner();
-        Thread.Sleep(_activityTime/2);
-
-        Console.Write("\nWhat is your favorite thing abot this experience?");
-        Spinner();
-        Thread.Sleep(_activityTime/2);
-
+        int reflectingTime = _activityTime;
+        while(reflectingTime > 0)
+        {
+            
+            Console.WriteLine("Reflection Prompt Placeholder");//Display Refelct prompt
+            Thread.Sleep(5000); //display spinner for 5s
+            reflectingTime = reflectingTime - 5;
+            
+        }
+       
     }
 
         public void EndMessage()

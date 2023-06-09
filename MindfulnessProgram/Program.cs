@@ -51,7 +51,9 @@ switch(userChoice)
     Console.Clear();
     reflecting.WellcomeMessage();
     reflecting.Instructions();
+    reflecting.ReflectPrompts();
     reflecting.EndMessage();
+
     
 
 

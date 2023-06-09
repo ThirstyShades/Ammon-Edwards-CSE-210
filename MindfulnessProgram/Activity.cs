@@ -21,7 +21,7 @@ public class Activity
 
     public void Spinner()
     {
-        
+  
         Console.Write("|");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
@@ -44,14 +44,59 @@ public class Activity
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
         Console.Write("\\");
-        Thread.Sleep(_spinnerSpeed);// pass in ms
-        Console.Write("\b");
-        
-        Console.Write("|");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
 
+        // Console.Write("|");
+        // Thread.Sleep(_spinnerSpeed);// pass in ms
+        // Console.Write("\b");
     }
+
+    // public void SpinnerTime()
+    // {
+    // int deration = _activityTime;
+    // while(deration >0)//i++
+    // {
+    //     Console.Write("|");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("/");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("-");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("\\");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("|");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("/");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("-");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+    //     Console.Write("\\");
+    //     Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     Console.Write("\b");
+        
+
+    //     deration -= (_spinnerSpeed/1000)*8;
+
+       
+    // }
+
+    
+
+        
+
+    //     // Console.Write("|");
+    //     // Thread.Sleep(_spinnerSpeed);// pass in ms
+    //     // Console.Write("\b");
+
+    // }
 
     public void Timer()
     {
@@ -78,10 +123,11 @@ public class Activity
                 break;
             }
         }
+        Console.WriteLine("");
     }
 
 
-    public void CountDown()
+    public void CountDown() // for bearthing act
     {
         int value = _activityTime;
         while(value !=0)
@@ -108,6 +154,7 @@ public class Activity
             
             
         }
+        Console.WriteLine("");// New line
         
         
     }
