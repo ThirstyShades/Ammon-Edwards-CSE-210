@@ -12,12 +12,6 @@ public class Activity
         _activityTime = activityTime;
     }
 
-    // public void AskTime()
-    // {
-    //     Console.WriteLine("Who long, in second, would you like for your session?");
-    //     _activityTime = int.Parse(Console.ReadLine());
-    //     Console.WriteLine(_activityTime);
-    // }
 
     public void Spinner()
     {
@@ -46,10 +40,6 @@ public class Activity
         Console.Write("\\");
         Thread.Sleep(_spinnerSpeed);// pass in ms
         Console.Write("\b");
-
-        // Console.Write("|");
-        // Thread.Sleep(_spinnerSpeed);// pass in ms
-        // Console.Write("\b");
     }
 
     public void SpinnerTime5s()

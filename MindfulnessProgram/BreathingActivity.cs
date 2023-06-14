@@ -2,8 +2,6 @@ public class BreathingActivity : Activity
 {
     
     private string wellcomeMessage = "Wellcome to the breathing Activity.\nThis activity will help you relax by walking you though breathing in and out slowly.\nClear your mind and focus on your breathing.";
-
-    // private string endMessage = ($"Well done!\nYou have sucesfully compleated another {_activityTime} interval breathing acitivty!");
     
     public BreathingActivity(int activityTime):base(activityTime)
     {
