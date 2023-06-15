@@ -1,10 +1,10 @@
-new abstract class Shape
+public abstract class Shape
 {
-    public string _color;
+    private string _color;
     
 
 
-    public void SetColor(string color)
+    public Shape(string color)
     {
         _color = color;
     }
@@ -14,7 +14,10 @@ new abstract class Shape
         return _color;
     }
 
-    public abstract float GetArea();
+    public abstract double GetArea();
+    
+
+    
     //GTG will finsh up soon
     
 }
