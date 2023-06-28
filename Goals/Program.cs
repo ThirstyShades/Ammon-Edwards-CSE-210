@@ -7,7 +7,7 @@ int userChoice = 0;
 while(userChoice != 6){
 
 // Show points
-Console.WriteLine($"Score: {overallScore}");
+Console.WriteLine($"Current Score: {overallScore}");
 // Menue display
 Console.WriteLine("Menu Options:");
 Console.WriteLine("1. Create New Goal");
@@ -95,7 +95,7 @@ switch(userChoice)
 
     break;
 
-    case 6: // quit display
+    case 6: // quit program
     Console.WriteLine("Thank you, goodybye.");
     break;
 

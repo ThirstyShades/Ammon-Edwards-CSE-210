@@ -23,16 +23,16 @@ public class ChecklistGoal : Goal
         Console.WriteLine("This goal has allready been compleated!");
         return 0;
     }
-    else if(_isCompleted == false || _actsRecorded +1 != _actsNeeded) 
+    else if(_isCompleted == false && _actsRecorded +1 != _actsNeeded) 
     {
         Console.WriteLine($"You are one step closer to compleating your goal! You earned {_bonuseScore} points!");
         _actsRecorded += 1;
         return _bonuseScore;
         
     }
-    else if(_isCompleted == false || _actsRecorded +1 == _actsNeeded)
+    else if(_isCompleted == false && _actsRecorded +1 == _actsNeeded)
     {
-        Console.WriteLine("Congraloations! you compleated your goal!");
+        Console.WriteLine($"Congraloations! you compleated your goal!\nYou reseved {_bonuseScore} + {_score} for a total of {_score + _bonuseScore} points!");
         _actsRecorded += 1;
         _isCompleted = true;
         return _score + _bonuseScore;
@@ -46,7 +46,7 @@ public class ChecklistGoal : Goal
 
 public override void DisplayGoal()
     {
-        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} ({_description}) | score: {_score} | currently compleated: {_actsRecorded}/{_actsNeeded}");
+        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} ({_description}) | score: {_score} | | update score: {_bonuseScore} | currently compleated: {_actsRecorded}/{_actsNeeded}");
     }
 
 }
