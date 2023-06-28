@@ -1,23 +1,31 @@
 public class SimpleGoal : Goal
 {
-    string test = "SimpleGoal";
-
+    
+// all needed attributes have been inharited from the bass class along with the constuctor information.
 
 public SimpleGoal() : base()
     {
 
     }
 
-    public void TestPrint()
-    {
-        Console.WriteLine(test);
-    }
+
 
 public override int RecordEvent()
 {
     Console.WriteLine("Simple Goal event recorded.");
-    _isCompleted = true;
-    return _score;
+    if(_isCompleted == false)
+    {
+        _isCompleted = true;
+        Console.WriteLine($"Congradualtions you earned {_score} points!");
+        return _score;
+    }
+    else
+    {
+        Console.WriteLine("That goal has allready been compleated!");
+        return 0;
+    }
+    
+    
 
 // }
 

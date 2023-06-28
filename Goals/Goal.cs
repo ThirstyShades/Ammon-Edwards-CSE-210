@@ -12,7 +12,7 @@ public abstract class Goal
     public Goal() 
     {
         
-        Console.WriteLine("Enter the score:");
+        Console.WriteLine("Enter the number of points you will get by compleatign this goal:");
         _score = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Enter the name of the goal:");
@@ -22,10 +22,21 @@ public abstract class Goal
         _description = Console.ReadLine();
     }
 
+    public abstract int RecordEvent(); // Records the goal has taken place and returns it's score
+
+    public virtual void DisplayGoal()
+    {
+        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} | {_description} | {_score}");
+    }
+
+
+
+
+
     public int GetScore()
-        {
-            return _score;
-        }
+    {
+        return _score;
+    }
 
     public string GetName()
     {
@@ -35,13 +46,6 @@ public abstract class Goal
     public string GetDescription()
     {
         return _description;
-    }
-
-    public abstract int RecordEvent(); // Records the goal has taken place and returns it's score
-
-    public virtual void DisplayGoal()
-    {
-        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} | {_description} | {_score}");
     }
 
 }
