@@ -1,5 +1,5 @@
 ﻿
-List<Goal> goals = new List<Goal>(); // list of made goals I don't know a better place to put this atm
+List<Goal> _goals = new List<Goal>(); // list of made goals I don't know a better place to put this atm
 int overallScore = 0;
 
 int userChoice = 0; 
@@ -32,7 +32,8 @@ switch(userChoice)
             
             Console.WriteLine("New Simple Goal");
             Goal simple1 = new SimpleGoal();
-
+            _goals.Add(simple1);
+            
             break;
         }
         else if(goalChoice == 2)
@@ -57,7 +58,7 @@ switch(userChoice)
     
 
     case 2: 
-    foreach (Goal i in goals)
+    foreach (Goal i in _goals)
         {
             i.DisplayGoal();
         }

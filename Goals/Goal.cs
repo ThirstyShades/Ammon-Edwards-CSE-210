@@ -41,11 +41,12 @@ public abstract class Goal
 
     public virtual void DisplayGoal()
     {
-        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name}");
+        Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} | {_description} | {_score}");
     }
 
 }
-
+// is compleated method
+// 
 
 
 
