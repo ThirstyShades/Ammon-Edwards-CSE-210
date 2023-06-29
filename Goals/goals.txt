@@ -1,0 +1,3 @@
+SimpleGoal:s,g,10
+EternalGoal:e,g,20
+CheckListGoal:c,g,30,50,0,100

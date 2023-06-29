@@ -1,13 +1,16 @@
 ﻿
-List<Goal> _goals = new List<Goal>(); // list of made goals I don't know a better place to put this atm
+List<Goal> _goals = new List<Goal>(); // list of made goals 
+List<Goal> _compleatedGoals = new List<Goal>(); // list of compleated goals
 int overallScore = 0;
-
+int goalsCompleated = 0;
+SaveLoad save1 = new SaveLoad();
 
 int userChoice = 0; 
 while(userChoice != 6){
 
 // Show points
 Console.WriteLine($"Current Score: {overallScore}");
+Console.WriteLine($"Compleated Goals: {goalsCompleated}");
 // Menue display
 Console.WriteLine("Menu Options:");
 Console.WriteLine("1. Create New Goal");
@@ -31,7 +34,7 @@ switch(userChoice)
     
     int goalChoice = int.Parse(Console.ReadLine());
 
-        if(goalChoice == 1)
+        if(goalChoice == 1)// new simple goal
         {
             
             Console.WriteLine("New Simple Goal:");
@@ -40,7 +43,7 @@ switch(userChoice)
             
             break;
         }
-        else if(goalChoice == 2)
+        else if(goalChoice == 2)// new enternal goal
         {
             Console.WriteLine("New Eternal Goal:");
             Goal eternal1 = new EternalGoal(); // base goal has prompts and input logic from user
@@ -48,7 +51,7 @@ switch(userChoice)
             break;
 
         }
-        else if(goalChoice == 3)
+        else if(goalChoice == 3)// new checklsit goal
         {
             //New Checklist goal
             Console.WriteLine("New Checklist Goal");
@@ -64,7 +67,7 @@ switch(userChoice)
 
     
 
-    case 2: 
+    case 2: // list goals
     int index = 1;
     foreach (Goal i in _goals)
         {
@@ -75,10 +78,18 @@ switch(userChoice)
 
     break;
 
-    case 3:
+    case 3:// save
+    // save1.Save(_goals);// save load class made at the top of the program
+    
+    
+    
     break;
 
-    case 4:
+    case 4:// Load
+    // Console.WriteLine("What is the file name?");
+    // string _filename = Console.ReadLine();
+    // save1.Load(_filename);
+
     break;
 
     case 5: // list goals, unser input to record a goal, take index of that input and add the score to the overallScore variable at the top of the program. If it is a simple goal, remove it or makr it compleat, eternal goals are never compleate, increment the list goal. 
@@ -91,7 +102,20 @@ switch(userChoice)
         }
         Console.WriteLine("What goal did you compleate?");
         int selection = int.Parse(Console.ReadLine());
-        overallScore += _goals[selection -1].RecordEvent();
+        int returnedScore = _goals[selection -1].RecordEvent();
+        overallScore += returnedScore;
+        // overallScore += _goals[selection -1].RecordEvent(); // this was my orignal code but changed it to more clearly impment a goal tracker. 
+        //Keep track of compleated goals
+        if(returnedScore > 0)
+        {
+            _compleatedGoals.Add(_goals[selection -1]);
+            goalsCompleated = _compleatedGoals.Count;
+        }
+        else
+        {
+            break;
+        }
+
 
     break;
 
@@ -99,6 +123,12 @@ switch(userChoice)
     Console.WriteLine("Thank you, goodybye.");
     break;
 
+    // this was trying to get the score into a txt/csv file however i could not finish it.
+
+    // int GetScore()
+    // {
+    //     return overallScore;
+    // }
 
 }
 }

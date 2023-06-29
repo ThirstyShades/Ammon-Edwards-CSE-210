@@ -15,4 +15,12 @@ public override int RecordEvent()
     return _score;
 
 }
+
+public override string Serialize() // this was for saving and loadign to a text file but I could not finish that
+    {
+        return $"EternalGoal:{_name},{_description},{_score}";
+    }
+
+    
+
 }

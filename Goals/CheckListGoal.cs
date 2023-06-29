@@ -49,4 +49,9 @@ public override void DisplayGoal()
         Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} ({_description}) | score: {_score} | | update score: {_bonuseScore} | currently compleated: {_actsRecorded}/{_actsNeeded}");
     }
 
+    public override string Serialize()// this was for saving and loadign to a text file but I could not finish that
+    {
+        return $"CheckListGoal:{_name},{_description},{_score},{_bonuseScore},{_actsRecorded},{_actsNeeded}";
+    }
+
 }

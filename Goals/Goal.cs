@@ -1,4 +1,4 @@
-public abstract class Goal
+public abstract class Goal  
 {
 
     
@@ -12,7 +12,7 @@ public abstract class Goal
     public Goal() 
     {
         
-        Console.WriteLine("Enter the number of points you will get by compleatign this goal:");
+        Console.WriteLine("Enter the number of points you will get by compleating this goal:");
         _score = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Enter the name of the goal:");
@@ -29,7 +29,8 @@ public abstract class Goal
         Console.WriteLine($"[{(_isCompleted ? "X" : " ")}] {_name} | {_description} | {_score}");
     }
 
-
+    public abstract string Serialize(); // Serialize the contencts to be loaded and unloaded from a txt file.
+  
 
 
 
@@ -46,6 +47,11 @@ public abstract class Goal
     public string GetDescription()
     {
         return _description;
+    }
+
+    public bool GetIsCompleted()
+    {
+        return _isCompleted;
     }
 
 }
