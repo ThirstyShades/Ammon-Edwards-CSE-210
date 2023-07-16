@@ -18,7 +18,7 @@ Reception reception = new Reception("The best Reception", "this is a reception f
 OutdoorGathering outdoorGathering = new OutdoorGathering("Event", "this is a event", date3, time3, address3, "Sunny");
 // display
 Console.Clear(); // I cleared the console to make it easy to see everything.
-Console.WriteLine($"------------------------------------------------------------Wellcome to the grand idk, here are all the event details!-------------------------------"); //this is to help find the start of the program as there is alot of text.
+Console.WriteLine($"------------------------------------------------------------Wellcome to the grand idk, here are all the event details!-------------------------------"); //this is to help find the start of the program as there is alot of text, and I mean alot. 
 Console.WriteLine($"--- Lecture ---");
 Console.WriteLine($"---------------");
 Console.WriteLine($"Standard details:\n");
